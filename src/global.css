@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/* base de cores de cada tipo */
+/* Tipos de Pokémon */
+.normal {
+    color: white;
+    background: #A8A77A;
+  }
+  
+  .fighting {
+    color: white;
+    background: #C22E28;
+  }
+  
+  .flying {
+    color: white;
+    background: #A98FF3;
+  }
+  
+  .poison {
+    color: white;
+    background: #A33EA1;
+  }
+  
+  .ground {
+    color: white;
+    background: #E2BF65;
+  }
+  
+  .rock {
+    color: white;
+    background: #B6A136;
+  }
+  
+  .bug {
+    color: white;
+    background: #A6B91A;
+  }
+  
+  .ghost {
+    color: white;
+    background: #735797;
+  }
+  
+  .steel {
+    color: white;
+    background: #B7B7CE;
+  }
+  
+  .fire {
+    color: white;
+    background: #EE8130;
+  }
+  
+  .water {
+    color: white;
+    background: #6390F0;
+  }
+  
+  .grass {
+    color: white;
+    background: #7AC74C;
+  }
+  
+  .electric {
+    color: white;
+    background: #F7D02C;
+  }
+  
+  .psychic {
+    color: white;
+    background: #F95587;
+  }
+  
+  .ice {
+    color: white;
+    background: #96D9D6;
+  }
+  
+  .dragon {
+    color: white;
+    background: #6F35FC;
+  }
+  
+  .dark {
+    color: white;
+    background: #705746;
+  }
+  
+  .fairy {
+    color: white;
+    background: #D685AD;
+  }
+  
+  .stellar {
+    color: white;
+    background: #999999;
+  }
+  
+  .unknown {
+    color: white;
+    background: #777777;
+  }
+  
