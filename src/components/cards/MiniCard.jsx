@@ -1,22 +1,23 @@
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
-import { getPokemonByIdOrName } from "../../services/pokemonService"
+import { getPokemonByIdOrName, getPokemonSpriteByName } from "../../services/pokemonService"
+import spriteDefault from "../../assets/pokebola.png"
 
 export function MiniCard({ pokemon }) {
     const [details, setDetails] = useState({})
+    const [urlSprite, setUrlSprite] = useState("")
     const navigate = useNavigate()
 
     useEffect(() => {
         getPokemonByIdOrName(pokemon).then(resp => {
             const data = resp.data
-
             const types = data.types.map(item => {
                 return item.type.name
             })
 
             const details = {
                 "id": data.id,
-                "cod": data.id.toString().padStart(4, "0"),
+                "cod": data.id.toString().padStart(3, "0"),
                 "name": data.name,
                 "hp": data.stats[0].base_stat,
                 "attack": data.stats[1].base_stat,
@@ -27,11 +28,12 @@ export function MiniCard({ pokemon }) {
                 "height": data.height,
                 "weight": data.weight,
                 "type": types,
-                "sprite": data.sprites.front_default
             }
 
+            setUrlSprite(getPokemonSpriteByName(data.name))
             setDetails(details)
         })
+
     }, [])
 
     const handleClick = () => {
@@ -40,7 +42,7 @@ export function MiniCard({ pokemon }) {
 
     return (
         <div onClick={handleClick}
-            className="flex justify-between items-center gap-8 cursor-pointer w-full h-32 p-4 rounded-lg bg-linear-to-l from-gray-200 from-50% to-gray-100 to-50% hover:from-100%">
+            className="flex justify-between items-center gap-8 cursor-pointer w-full h-36 mb-2 pl-4 pb-4 rounded-lg bg-linear-to-l from-gray-200 from-50% to-gray-100 to-50% hover:from-100%">
 
             <div className="w-1/2">
                 <h2 className="font-bold uppercase">{details.name}</h2>
@@ -51,7 +53,7 @@ export function MiniCard({ pokemon }) {
                     )) : null}
                 </ul>
             </div>
-            <img className="w-1/2" src={details.sprite} />
+            <img className="w-1/2 -mt-[28px] h-auto pl-2" src={urlSprite ? urlSprite : spriteDefault} />
         </div>
     )
 }

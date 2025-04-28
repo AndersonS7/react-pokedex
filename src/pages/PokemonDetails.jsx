@@ -2,10 +2,11 @@ import { useLocation, Navigate } from "react-router-dom"
 import { Header } from "../components/header/Header"
 import { Stats } from "../components/stats/Stats"
 import { useEffect, useState } from "react"
-import { getPokemonEvolution } from "../services/pokemonService"
+import { getPokemonSpriteByName } from "../services/pokemonService"
+import spriteDefault from "../assets/pokebola.png"
 
 export function PokemonDetails() {
-    const [evolution, setEvolution] = useState({})
+    const [urlSprite, setUrlSprite] = useState("")
 
     const location = useLocation()
     const details = location.state?.details
@@ -15,30 +16,15 @@ export function PokemonDetails() {
     }
 
     useEffect(() => {
-        getPokemonEvolution(details.id).then(resp => {
-            const data = resp.data
-            console.log(data)
-            console.log(details.id)
-
-            const evo = {
-                "id": data.id,
-                "current": data.chain.species.name,
-                "next": data.chain.evolves_to[0].species.name,
-                "next_url": data.chain.evolves_to[0].species.url,
-                "last": data.chain.evolves_to[0].evolves_to[0].species.name,
-                "last_url": data.chain.evolves_to[0].evolves_to[0].species.url
-            }
-
-            setEvolution(evo)
-        })
+        setUrlSprite(getPokemonSpriteByName(details.name))
     }, [])
 
     return (
         <div>
             <Header />
             <section className="flex justify-center items-center mt-8">
-                <div className="grid grid-cols-2 gap-4 w-4/5 p-4 bg-gray-100 rounded-md">
-                    <div className="bg-white rounded-md p-2">
+                <div className="grid grid-cols-2 gap-4 w-3/5 p-4 bg-gray-100 rounded-md">
+                    <div className="bg-white rounded-md p-4">
                         <div className="flex justify-between">
                             <div className="flex justify-start flex-col w-2/5">
                                 <h2 className="font-bold uppercase text-2xl">{details.name}</h2>
@@ -66,18 +52,8 @@ export function PokemonDetails() {
                         </div>
                     </div>
                     <div className="flex justify-center items-center bg-white rounded-md">
-                        <img className="w-1/2" src={details.sprite} />
+                        <img className="h-64 w-auto pl-4" src={urlSprite ? urlSprite : spriteDefault} />
                     </div>
-                </div>
-            </section>
-            <section className="flex justify-center items-center mt-4">
-                <div className="flex flex-col gap-4 w-4/5 p-4 bg-gray-100 rounded-md">
-                    <strong>Evoluções</strong>
-                    <ul>
-                        <li>{evolution.current}</li>
-                        <li>{evolution.next}</li>
-                        <li>{evolution.last}</li>
-                    </ul>
                 </div>
             </section>
         </div>

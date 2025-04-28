@@ -23,3 +23,7 @@ export const getPokemonByIdOrName = (id = 1) => {
 export const getPokemonEvolution = (id = 1) => {
     return api.get(`evolution-chain/${id}`)
 }
+
+export const getPokemonSpriteByName = (name = "bulbasaur") => {
+    return `https://img.pokemondb.net/sprites/home/normal/${name}.png`
+}
