@@ -41,17 +41,13 @@ Este projeto é uma aplicação web em **React** que consome a [PokéAPI](https:
 
 ## ✨ Funcionalidades
 
-- Listagem paginada de Pokémons  
-- Busca por nome  
+- Listagem de Pokémons  
 - Filtro por tipo (Água, Fogo, Planta…)  
 - Página de detalhes com:
   - Imagens (sprites oficiales)
   - Estatísticas (HP, Attack, Defense…)
-  - Habilidades
-- Design responsivo (desktop / mobile)  
 - **Em andamento**:  
-  - Favoritar Pokémons  
-  - Histórico de buscas  
+  - Paginação 
 
 ---
 
@@ -61,7 +57,6 @@ Este projeto é uma aplicação web em **React** que consome a [PokéAPI](https:
 - **Axios** (requisições HTTP)  
 - **Tailwind CSS** (estilização utilitária)  
 - **React Router** (navegação SPA)  
-- **ESLint / Prettier** (lint e formatação)  
 
 ---
 
