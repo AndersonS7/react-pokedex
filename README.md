@@ -12,14 +12,7 @@
 - [Demonstração](#-demonstração)  
 - [Funcionalidades](#-funcionalidades)  
 - [Tecnologias](#%EF%B8%8F-tecnologias)  
-- [Instalação](#-instalação)  
-- [Como usar](#-como-usar)  
-- [Estrutura de Pastas](#-estrutura-de-pastas)  
-- [API](#-api)  
-- [Roadmap](#-roadmap)  
-- [Contribuição](#-contribuição)  
-- [Licença](#-licença)  
-- [Contato](#-contato)  
+- [Instalação](#-instalação)
 
 ---
 
