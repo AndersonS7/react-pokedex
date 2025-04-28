@@ -2,7 +2,7 @@
 
 ![React](https://img.shields.io/badge/React-18-blue) ![Axios](https://img.shields.io/badge/Axios-0.27-green) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
-> Uma aplicação em React que consome a PokéAPI para exibir informações de Pokémons de forma interativa e estilosa.
+> Uma aplicação em React que consome a PokéAPI para exibir informações de Pokémons de forma interativa.
 
 ---
 
