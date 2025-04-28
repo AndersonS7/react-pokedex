@@ -18,7 +18,7 @@
 
 ## 🔍 Sobre
 
-Este projeto é uma aplicação web em **React** que consome a [PokéAPI](https://pokeapi.co/) utilizando **Axios** para requisições HTTP. A estilização é feita com **Tailwind CSS**. O objetivo principal é fornecer uma interface agradável para buscar e visualizar dados de Pokémons (nome, sprites, tipos, estatísticas etc.).
+Este projeto é uma aplicação web em **React** que consome a [PokéAPI](https://pokeapi.co/) utilizando **Axios** para requisições HTTP. A estilização é feita com **Tailwind CSS**, [Pokémon DB]([https://pokeapi.co/](https://pokemondb.net/sprites/bulbasaur)) para as imagens . O objetivo principal é fornecer uma interface agradável para buscar e visualizar dados de Pokémons (nome, sprites, tipos, estatísticas etc.).
 
 ---
 
