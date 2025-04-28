@@ -34,7 +34,8 @@ O objetivo principal é fornecer uma interface agradável para buscar e visualiz
 
 > Em desenvolvimento…  
 >  
-> ![screenshot-home](docs/screenshot-home.png)  
+> ![screenshot-home]([docs/screenshot-home.png](https://github.com/AndersonS7/react-pokedex/blob/main/img_02.png?raw=true))  
+> ![screenshot-details]([https://github.com/AndersonS7/react-pokedex/blob/main/img_03.png?raw=true))  
 > *Layout inicial da página de listagem de Pokémons.*
 
 ---
