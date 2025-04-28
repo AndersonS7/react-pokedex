@@ -9,7 +9,7 @@ export function Home() {
     const [selectedPokemon, setSelectedPokemon] = useState({})
 
     useEffect(() => {
-        getAllPokemons(100, 0).then(resp => {
+        getAllPokemons(150, 0).then(resp => {
             const names = resp.data.results.map(item => {
                 return item.name
             })
@@ -33,12 +33,13 @@ export function Home() {
             })
             setTypes(typesName)
         })
-
     }, [])
 
-    useEffect(() => {
-        if (selectedPokemon.id != 0) {
-            getPokemonsByType(selectedPokemon.id).then(resp => {
+    const handleSelected = (type) => {
+        setSelectedPokemon(type)
+
+        if (type.id != 0 || type != null) {
+            getPokemonsByType(type.id).then(resp => {
                 const data = resp.data
                 const names = data.pokemon.map(pokemon => {
                     return pokemon.pokemon.name
@@ -46,17 +47,20 @@ export function Home() {
                 setPokemons(names)
             })
         }
-
-    }, [selectedPokemon])
-
-    const handleSelected = (type) => {
-        setSelectedPokemon(type)
     }
 
     const handleDeleteType = () => {
         setSelectedPokemon({
             "id": 0,
             "name": null
+        })
+
+        getAllPokemons(150, 0).then(resp => {
+            const names = resp.data.results.map(item => {
+                return item.name
+            })
+
+            setPokemons(names)
         })
     }
 
@@ -75,12 +79,12 @@ export function Home() {
                         </ul>
                     </div>
 
-                    {/* {selectedPokemon.id > 0 && <div className="flex justify-between w-full mt-4">
+                    {selectedPokemon.id > 0 && <div className="flex justify-between w-full mt-4">
                         <div className="flex gap-4 w-5/6 pl-4 py-2 mt-4 bg-gray-100 rounded-lg">
                             <span>Pokémons do Tipo</span> <span className={`${selectedPokemon.name} flex justify-center items-center w-30 rounded-xl font-light capitalize`}>{selectedPokemon.name}</span>
                         </div>
                         <button onClick={handleDeleteType} className="flex justify-center w-1/6 p-2 mt-4 text-white bg-red-300 rounded-r-lg hover:border-r-red-400 hover:font-bold">X</button>
-                    </div>} */}
+                    </div>}
 
                 </section >
                 <section className="flex justify-center items-center flex-col mt-4 p-4">

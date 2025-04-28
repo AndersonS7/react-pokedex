@@ -42,9 +42,9 @@ export function MiniCard({ pokemon }) {
 
     return (
         <div onClick={handleClick}
-            className="flex justify-between items-center gap-8 cursor-pointer w-full h-36 mb-2 pl-4 pb-4 rounded-lg bg-linear-to-l from-gray-200 from-50% to-gray-100 to-50% hover:from-100%">
+            className="flex justify-between items-center gap-8 cursor-pointer w-full h-40 mb-2 pl-4 pb-4 rounded-lg bg-linear-to-l from-gray-200 from-50% to-gray-100 to-50% hover:from-100%">
 
-            <div className="w-1/2">
+            <div className="flex flex-col justify-start w-1/2 h-full p-2">
                 <h2 className="font-bold uppercase">{details.name}</h2>
                 <span className="font-light uppercase text-gray-400">#{details.cod}</span>
                 <ul className="flex flex-col gap-2 w-full">
@@ -53,7 +53,7 @@ export function MiniCard({ pokemon }) {
                     )) : null}
                 </ul>
             </div>
-            <img className="w-1/2 -mt-[28px] h-auto pl-2" src={urlSprite ? urlSprite : spriteDefault} />
+            <img className="w-1/2 h-auto -mt-[18px] pl-2" src={urlSprite ? urlSprite : spriteDefault} />
         </div>
     )
 }

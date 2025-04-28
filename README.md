@@ -1,12 +1,72 @@
-# React + Vite
+# PokéInfo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue) ![Axios](https://img.shields.io/badge/Axios-0.27-green) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
-Currently, two official plugins are available:
+> Uma aplicação em React que consome a PokéAPI para exibir informações de Pokémons de forma interativa e estilosa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📝 Índice
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Sobre](#-sobre)  
+- [Demonstração](#-demonstração)  
+- [Funcionalidades](#-funcionalidades)  
+- [Tecnologias](#%EF%B8%8F-tecnologias)  
+- [Instalação](#-instalação)  
+- [Como usar](#-como-usar)  
+- [Estrutura de Pastas](#-estrutura-de-pastas)  
+- [API](#-api)  
+- [Roadmap](#-roadmap)  
+- [Contribuição](#-contribuição)  
+- [Licença](#-licença)  
+- [Contato](#-contato)  
+
+---
+
+## 🔍 Sobre
+
+Este projeto é uma aplicação web em **React** que consome a [PokéAPI](https://pokeapi.co/) utilizando **Axios** para requisições HTTP. A estilização é feita com **Tailwind CSS**, permitindo um design responsivo e rápido.  
+O objetivo principal é fornecer uma interface agradável para buscar e visualizar dados de Pokémons (nome, sprites, tipos, estatísticas, habilidades etc.).
+
+---
+
+## 🚀 Demonstração
+
+> Em desenvolvimento…  
+>  
+> ![screenshot-home](docs/screenshot-home.png)  
+> *Layout inicial da página de listagem de Pokémons.*
+
+---
+
+## ✨ Funcionalidades
+
+- Listagem paginada de Pokémons  
+- Busca por nome  
+- Filtro por tipo (Água, Fogo, Planta…)  
+- Página de detalhes com:
+  - Imagens (sprites oficiales)
+  - Estatísticas (HP, Attack, Defense…)
+  - Habilidades
+- Design responsivo (desktop / mobile)  
+- **Em andamento**:  
+  - Favoritar Pokémons  
+  - Histórico de buscas  
+
+---
+
+## 🛠️ Tecnologias
+
+- **React** (create-react-app / Vite)  
+- **Axios** (requisições HTTP)  
+- **Tailwind CSS** (estilização utilitária)  
+- **React Router** (navegação SPA)  
+- **ESLint / Prettier** (lint e formatação)  
+
+---
+
+## ⚙️ Instalação
+
+1. Clone este repositório  
+   ```bash
+   git clone https://github.com/seu-usuario/pokeinfo.git
