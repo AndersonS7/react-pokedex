@@ -30,6 +30,12 @@ O objetivo principal é fornecer uma interface agradável para buscar e visualiz
 
 ---
 
+## 🔍 Recurso
+> [PokéAPI](https://pokeapi.co/)
+> [Pokémon DB](https://pokemondb.net/sprites/bulbasaur)
+
+---
+
 ## 🚀 Demonstração
 
 > Em desenvolvimento…  
